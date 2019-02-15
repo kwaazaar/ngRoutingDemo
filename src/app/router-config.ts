@@ -28,6 +28,9 @@ export const routerConfig: Routes = [
             },
         ]
     },
+    {
+        path: 'products', loadChildren: './products/products.module#ProductsModule'
+    },
     { path: 'about', component: AboutComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
