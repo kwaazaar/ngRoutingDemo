@@ -4,6 +4,8 @@ import { AboutComponent } from './about/about.component';
 import { DetailAComponent } from './home/detail-a/detail-a.component';
 import { DetailCComponent } from './home/detail-c/detail-c.component';
 import { DetailBComponent } from './home/detail-b/detail-b.component';
+import { Sub1Component } from './home/detail-c/sub1/sub1.component';
+import { Sub2Component } from './home/detail-c/sub2/sub2.component';
 
 export const routerConfig: Routes = [
     {
@@ -20,7 +22,11 @@ export const routerConfig: Routes = [
             },
             {
                 path: 'detailc',
-                component: DetailCComponent
+                component: DetailCComponent, children: [
+                    { path: 'sub1', component: Sub1Component },
+                    { path: 'sub2', component: Sub2Component },
+                    { path: '', redirectTo: 'sub1', pathMatch: 'full' },
+                ]
             },
             {
                 path: '',

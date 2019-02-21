@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   navigate(path: string) {
     // By Url
-    //this.router.navigateByUrl(`/home/${path}`);
+    // this.router.navigateByUrl(`/home/${path}`);
 
     // Only default (primary) outlet
     this.router.navigate([path], { relativeTo: this.route });
